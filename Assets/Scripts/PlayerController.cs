@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
     }
     //for Getting players inputs
     protected void GetInputs(){
-        Debug.Log("GettinInput");
         horizontalMovement = Input.GetAxis("Horizontal");
         verticalMovement = Input.GetAxis("Vertical");
     }
