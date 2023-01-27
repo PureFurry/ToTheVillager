@@ -5,9 +5,6 @@ using UnityEngine;
 public class Player : PlayerController
 {
     public static float player_speed = 5;
-    public static int player_damage;
-    public static int player_heath;
-    public static int player_stamina;
     void Start()
     {
         
@@ -18,5 +15,14 @@ public class Player : PlayerController
     {
         GetInputs();
         Movement();
+        if (horizontalMovement < 0 && isFaceRight == true)
+        {
+            FlipLook();
+        }
+        else if(horizontalMovement > 0 && isFaceRight == false)
+        {
+            FlipLook();
+        }
+        PlayerAnimationControl();
     }
 }
