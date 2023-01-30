@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : PlayerController
 {
+    public bool playerHandEmpty = true;
     public static float player_speed = 5;
     void Start()
     {
@@ -24,5 +25,6 @@ public class Player : PlayerController
             FlipLook();
         }
         PlayerAnimationControl();
+
     }
 }

@@ -10,6 +10,9 @@ public class CameraFollow : MonoBehaviour
     private Vector3 offset;            //Private variable to store the offset distance between the player and camera
 
     // Use this for initialization
+    private void Awake() {
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y,-10); 
+    }
     void Start () 
     {
         //Calculate and store the offset value by getting the distance between the player's position and camera's position.
