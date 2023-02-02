@@ -9,7 +9,7 @@ public class ObjectGrabbable : MonoBehaviour
         this.gameObject.transform.position = objectGrabPointTransform.position;
     }
     public void DropObject(Transform objectDropPointTransform){
-        this.gameObject.transform.parent = objectDropPointTransform;
-        this.gameObject.transform.position = objectDropPointTransform.position;
+        objectDropPointTransform.parent = this.gameObject.transform;
+        objectDropPointTransform.position = this.gameObject.transform.position;
     }
 }

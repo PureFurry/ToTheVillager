@@ -6,10 +6,6 @@ public class Player : PlayerController
 {
     public bool playerHandEmpty = true;
     public static float player_speed = 5;
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -25,6 +21,5 @@ public class Player : PlayerController
             FlipLook();
         }
         PlayerAnimationControl();
-
     }
 }
